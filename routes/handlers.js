@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/', function(req,res){
     res.render('home',
     {title: 'Home Page',
+    style: 'home.css',
     slogan: 'Fare polpette di qualcuno.',
     name: "Carmen's"
     });
@@ -14,6 +15,7 @@ router.get('/', function(req,res){
 router.get('/menu', function(req,res){
     res.render('menu',
     {title: 'Menu',
+    style:'menu.css',
     menuItems: [
         {
             foodItems: ['Pizza', 'Pane', 'Pasta', 'Rice', 'Pesce', 'Carne', 'Verdura', 'Formaggi']
@@ -33,6 +35,7 @@ router.get('/menu', function(req,res){
 router.get('/contact', function(req,res){
     res.render('contact', 
     {title: 'Contact',
+    style: 'contact.css',
     owner: 'Carmen Agliata',
     phone: '4449994949',
     address: '401 Roman Ave, Cobeletti California, 20904',
