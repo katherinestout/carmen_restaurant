@@ -10,8 +10,20 @@ app.set('view engine', 'handlebars');
 
 app.set('port', (process.env.PORT || 3000));
 
+//Routing
 app.get('/', function(req,res){
-    res.render('home');
+    res.render('home',
+    {title: 'Home Page'});
+});
+
+app.get('/menu', function(req,res){
+    res.render('menu',
+    {title: 'Menu'});
+});
+
+app.get('/contact', function(req,res){
+    res.render('contact', 
+    {title: 'Contact'});
 });
 
 app.listen(app.get('port'), function(){

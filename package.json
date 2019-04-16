@@ -2,7 +2,7 @@
   "name": "carmen_restaurant_folder",
   "version": "1.0.0",
   "description": "restaurant",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2"
+    "express-handlebars": "^3.0.2",
+    "nodemon": "^1.18.11"
   }
 }
