@@ -36,10 +36,14 @@ router.get('/contact', function(req,res){
     res.render('contact', 
     {title: 'Contact',
     style: 'contact.css',
-    owner: 'Carmen Agliata',
-    phone: '4449994949',
-    address: '401 Roman Ave, Cobeletti California, 20904',
-    email: 'agliata_restaurant@gmail.com'
+    carmen: 
+        {
+        Owner: 'Carmen Algiata',
+        Phone: '4449994949',
+        Address: '401 Roman Ave, Cobeletti California, 20904',
+        Email: 'agliata_restaurant@gmail.com'
+        }
+            
     });
 });
 
