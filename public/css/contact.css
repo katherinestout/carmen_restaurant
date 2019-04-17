@@ -12,12 +12,23 @@ h1{
     text-align: center;
 }
 
+.header-container{
+    margin: 10px;
+    padding-top: 60px;
+ }
+
+ /*for sticky nav*/
+.content {
+    padding: 40px;
+}
 
 .sticky{
-
+    position: fixed;
     top: 0;
     width: 100%;
+
 }
-.header-container{
-   margin-bottom: 10px;
+
+.sticky + .content {
+    padding-top: 60px;
 }
