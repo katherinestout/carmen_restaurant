@@ -1,1 +1,21 @@
 <h1>Menu Page</h1>
+
+{{#each menuItems as |xValue xKey|}}
+
+    {{#each xValue.foodItems as |yValue yKey|}}
+        <p>{{yValue}}</p>
+    {{/each}}
+
+    <hr>
+
+    {{#each xValue.wineItems as |yValue yKey|}}
+        <p>{{yValue}}</p>
+    {{/each}}
+
+    <hr>
+
+    {{#each xValue.dessertItems as |yValue yKey|}}
+        <p>{{yValue}}</p>
+    {{/each}}
+
+{{/each}}

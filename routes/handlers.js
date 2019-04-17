@@ -12,7 +12,7 @@ router.get('/', function(req,res){
     });
 });
 
-router.get('/menu', function(req,res){
+router.get('/menu', function(req, res){
     res.render('menu',
     {title: 'Menu',
     style:'menu.css',
