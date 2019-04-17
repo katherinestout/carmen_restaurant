@@ -1,12 +1,33 @@
 body {
     background: #fefed9;
-
 }
 
+.menu-page{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+h1{
 
-.footer{
-    background: whitesmoke;
-    width: 100%;
     text-align: center;
+}
+.header-container{
+    margin: 10px;
+    padding-top: 60px;
+ }
+
+.content {
+    padding: 40px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
 
 }
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+
