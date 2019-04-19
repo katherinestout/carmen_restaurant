@@ -1,0 +1,25 @@
+
+<div class="header-container">
+{{>header}}
+</div>
+
+<div id="navbar">
+{{>navbar}}
+</div>
+
+
+<div class="review-page content">
+    <h1>Reviews</h1>
+    <form action="/reviews" method ="post">
+    <p>
+        <label>Name:</label>
+   <input type="name2" name="name2">
+    </p>
+    <p>
+        <label>Review:</label>
+    <input type="text" name="description">
+    </p>
+
+    <button type="submit">Add</button>
+    </form>
+</div>

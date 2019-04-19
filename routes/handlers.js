@@ -47,6 +47,12 @@ router.get('/contact', function(req,res){
     });
 });
 
+router.get('/reviews', function(req,res){
+    res.render('reviews', 
+    {title: 'Reviews',
+    style: 'reviews.css'
+    });
+});
 
 
 module.exports = router;
