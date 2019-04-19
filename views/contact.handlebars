@@ -8,14 +8,44 @@
 
 
 <div class="contact-page">
-    <h1>Contact Page</h1>
+    <div class="container">
+      <h2 class="brand">Contact Carmen's</h2>
+      <div class="wrapper">
 
+      <div class="carmen-info">
+            {{#each carmen as |value key|}}
+                <p> {{key}} : {{value}}</p> 
+              {{/each}}
+      </div>
+
+
+      <div class="contact-form">
+        <h2>Email Us</h2>
+        <form>
+          <p>
+            <label>Name:</label>
+          <input type="text" name="name">
+          </p>
+            
+          <p>
+            <label>Email:</label>
+          <input type="email" name="email">
+          </p>
+            
+          <p class="full">
+            <label>Message:</label>
+         <textarea name="message"></textarea>
+          </p>
+
+          <p class="full">
+            <button>Submit</button>
+          </p>
+        </form>
+
+      </div>
+      </div>
+    </div>
 </div>
-{{#each carmen as |value key|}}
 
-  <p> {{key}} : {{value}}</p> 
-
-
-{{/each}}
 
 
