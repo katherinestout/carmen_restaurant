@@ -54,5 +54,23 @@ router.get('/reviews', function(req,res){
     });
 });
 
+const Review = require('../models/reviews');
+
+//test route
+router.get('/test', (req ,res) => res.json({msg: "posts WORKS!"}));
+
+//post route
+router.post('/reviews', function(req,res){
+    let newReview = new Review({
+        description: req.body.description,
+        name2: req.body.name2
+    });
+    newReview.save().then(function(result){
+        console.log(result);
+        res.redirect('/')
+    });
+});
+
+
 
 module.exports = router;
