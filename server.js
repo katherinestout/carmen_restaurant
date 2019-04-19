@@ -2,10 +2,17 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const mongoose = require('mongoose');
 
 //variables
 const routes = require('./routes/handlers');
 const app = express();
+
+//DB config
+const db = require('./config/keys').mongoURI;
+
+//Connect to MongoDB
+mongoose.connect(db).then(()=> console.log('MongoDB connected')).catch(err => console.log(err));
 
 //main layout
 const hbs = exphbs.create({
