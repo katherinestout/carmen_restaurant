@@ -9,27 +9,44 @@
 
 
 <div class="review-page content">
-    <h1>Reviews</h1>
-    <form action="/reviews" method ="post">
+       <div class="container">
+      <h2 class="brand">Reviews</h2>
+      <div class="wrapper">
+          
+<div class="review-form">
+
+ <form action="/reviews" method ="post">
+
     <p>
-        <label>Name:</label>
+    <label>Name:</label>
    <input type="name2" name="name2">
     </p>
-    <p>
-        <label>Review:</label>
-    <input type="text" name="description">
+
+    <p class="full">
+    <label>Review:</label>
+    <textarea type="text" name="description"></textarea>
     </p>
-
+    
+    <p class="full">
     <button type="submit">Add</button>
+    </p>
+    
     </form>
+    </div>
 
-    <ul>
-        <li>
+          
+      <div class="customer-reviews">
+   <ul>
             {{#reviews}}
-                {{description}}
+            <li>
+                {{description}} - {{name2}}
+            </li>
             {{/reviews}}
-       
-         
-        </li>
     </ul>
+
+      </div>
+        </div>
+          </div>
+
+   
 </div>

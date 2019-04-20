@@ -74,7 +74,10 @@ router.post('/reviews', function(req,res){
     });
     newReview.save().then(function(result){
         console.log(result);
-        res.redirect('/reviews')
+        res.redirect('/reviews');
+    }).catch(function(err){
+        console.log(err);
+        res.redirect('/reviews');
     });
 });
 
