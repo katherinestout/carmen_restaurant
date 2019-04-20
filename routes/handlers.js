@@ -3,6 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 
+const Review = require('../models/reviews');
+
 router.get('/', function(req,res){
     res.render('home',
     {title: 'Home Page',
@@ -47,17 +49,22 @@ router.get('/contact', function(req,res){
     });
 });
 
-router.get('/reviews', function(req,res){
-    res.render('reviews', 
-    {title: 'Reviews',
-    style: 'reviews.css'
-    });
-});
-
-const Review = require('../models/reviews');
+// REVIEWS ROUTES
 
 //test route
 router.get('/test', (req ,res) => res.json({msg: "posts WORKS!"}));
+
+//get route all
+router.get('/reviews', function(req, res){
+    Review.find({}).then(function(results){
+       res.render('reviews',  
+       {reviews: results,
+        title: "Reviews",
+        style: 'reviews.css'});
+       //console.log(results);
+   });
+  
+});
 
 //post route
 router.post('/reviews', function(req,res){
@@ -67,7 +74,7 @@ router.post('/reviews', function(req,res){
     });
     newReview.save().then(function(result){
         console.log(result);
-        res.redirect('/')
+        res.redirect('/reviews')
     });
 });
 
