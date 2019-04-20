@@ -3,7 +3,7 @@
 }
 
 body {
-    background: #92bde7;
+    background: #FEF6EF;
     line-height: 1.6;
     color: #485e74
 }
@@ -22,7 +22,7 @@ body {
 
 .contact-form {
     padding: 1em;
-    background:#f9feff;
+    background: #FEE2C2;
 }
 
 
@@ -46,17 +46,17 @@ body {
 .contact-form form button, .contact-form form input, .contact-form form textarea{
     width:100%;
     padding:1em;
-    border:1px solid #c9e6ff;
+    border:1px solid #FEBD84;
   }
   
   .contact-form form button{
-    background:#c9e6ff;
+    background:#FEBD84;
     border:0;
     text-transform: uppercase;
   }
   
   .contact-form form button:hover,.contact-form form button:focus{
-    background:#92bde7;
+    background: #FED78A;
     color:#fff;
     outline:0;
     transition: background-color 2s ease-out;
