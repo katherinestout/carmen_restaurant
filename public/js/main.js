@@ -16,4 +16,19 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-}})
+}
+
+
+
+});
+
+//for collapsable nav
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+};
+
