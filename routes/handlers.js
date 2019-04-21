@@ -50,6 +50,13 @@ router.get('/contact', function(req,res){
     });
 });
 
+router.get('/thanks', function(req,res){
+    res.render('thanks', 
+    {title: 'Thank You',
+    style: 'thanks.css',    
+    });
+});
+
 // REVIEWS ROUTES
 
 //test route
@@ -93,7 +100,7 @@ router.post('/contact', function(req, res){
     });
     newInquiry.save().then(function(result){
         console.log(result);
-        res.redirect('/contact');
+        res.redirect('/thanks');
     }).catch(function(err){
         console.log(err);
         res.redirect('/contact');
