@@ -4,6 +4,7 @@ const router = express.Router();
 
 
 const Review = require('../models/reviews');
+const Inquiry = require('../models/inquiries');
 
 router.get('/', function(req,res){
     res.render('home',
@@ -78,6 +79,24 @@ router.post('/reviews', function(req,res){
     }).catch(function(err){
         console.log(err);
         res.redirect('/reviews');
+    });
+});
+
+// EMAIL ROUTE
+//to save email information
+
+router.post('/contact', function(req, res){
+    let newInquiry = new Inquiry({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    });
+    newInquiry.save().then(function(result){
+        console.log(result);
+        res.redirect('/contact');
+    }).catch(function(err){
+        console.log(err);
+        res.redirect('/contact');
     });
 });
 
