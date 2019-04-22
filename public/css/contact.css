@@ -13,6 +13,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
+    margin-bottom: 10%;
 }
 
 .carmen-info{
@@ -125,13 +126,14 @@ h1{
 
 }
 .topnav a {
-    float: right;
+    float: left;
     display: block;
     text-align: center;
     text-decoration: none;
     color: #fff;
     font-size: 20px; 
-   margin-right: 5%;
+   margin-left: 5%;
+   padding: 10px;
  
 }
 
@@ -156,10 +158,22 @@ h1{
       position: absolute;
       right: 0;
       top: 0;
+      padding: 10px;
     }
     .topnav.responsive a {
       float: none;
       display: block;
       text-align: left;
+      padding: 10px;
     }
+  }
+
+  /*Footer*/
+
+footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      padding: 30px;
+  
   }
