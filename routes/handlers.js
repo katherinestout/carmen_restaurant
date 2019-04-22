@@ -1,6 +1,8 @@
 
 const express = require('express');
 const router = express.Router();
+const nodemailer =  require('nodemailer');
+const bodyParser = require('body-parser');
 
 
 const Review = require('../models/reviews');
@@ -90,9 +92,11 @@ router.post('/reviews', function(req,res){
 });
 
 // EMAIL ROUTE
-//to save email information
+//to save email information and send using nodemailer
 
-router.post('/contact', function(req, res){
+router.post('/contact', (req, res) => {
+
+    //saving the message to mongoDB
     let newInquiry = new Inquiry({
         name: req.body.name,
         email: req.body.email,
@@ -100,13 +104,53 @@ router.post('/contact', function(req, res){
     });
     newInquiry.save().then(function(result){
         console.log(result);
-        res.redirect('/thanks');
-    }).catch(function(err){
-        console.log(err);
-        res.redirect('/contact');
-    });
+
+    //nodemailer 
+    nodemailer.createTestAccount((err, account) => {
+        const htmlEmail = `
+        <h3>Contact Details</h3>
+        <ul>
+            <li>Name: ${req.body.name}</li>
+            <li>Email: ${req.body.email}</li>
+        </ul>
+        <h3>Message</h3>
+        <p>${req.body.message}</p> 
+        
+        `
+
+        //mail options
+
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
+            secure: false,
+            auth: {
+                user: 'kaylee19@ethereal.email',
+                pass: 'sSN3ZsgFj285TnZNCa'
+            }
+
+        });
+
+        let mailOptions = {
+            from: 'test@testaccount.com',
+            to: 'kaylee19@ethereal.email',
+            replyTo: 'test@testaccount.com',
+            subject: 'New Message',
+            text: req.body.message,
+            html: htmlEmail
+        };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+            if(err){
+                return console.log(err)
+            }
+            console.log('Message sent', info.message);
+            console.log('Message URL:', nodemailer.getTestMessageUrl(info));
+            res.redirect('/thanks');
+        })
+    })
 });
 
-
+});
 
 module.exports = router;
