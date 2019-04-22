@@ -6,6 +6,7 @@ body {
     background: #FEF6EF;
     line-height: 1.6;
     color: #485e74;
+    font-family: 'Dancing Script', cursive;
 }
 
 .thanks-page{
@@ -80,7 +81,7 @@ h1{
     color: #fff;
     font-size: 20px; 
    margin-left: 5%;
-   padding: 10px;
+   font-family: 'IBM Plex Sans Condensed', sans-serif;
  
 }
 

@@ -5,7 +5,8 @@
 body {
     background: #FEF6EF;
     line-height: 1.6;
-    color: #485e74
+    color: #485e74;
+    font-family: 'Dancing Script', cursive;
 }
 
 .menu-page{
@@ -47,17 +48,29 @@ h1{
 .wrapper {
     box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
     background: white;
+    text-align: center;
+
 }
 
 .wrapper > *{
     padding: 1em;
 }
-
 .menu{
 
         padding: 1em;
-        background: #fff;
+        background: #fff; 
+        display: grid;
+        align-items: center;
+        grid-template-rows: 1fr;
     
+}
+
+.menu-item{
+    border: #FEBD84 1px solid;
+    margin-top: 5px;
+    padding: 5px;
+
+   
 }
 
 /*For navbar*/
@@ -74,7 +87,7 @@ h1{
     color: #fff;
     font-size: 20px; 
    margin-left: 5%;
-   padding: 10px;
+   font-family: 'IBM Plex Sans Condensed', sans-serif;
  
 }
 

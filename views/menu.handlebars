@@ -14,25 +14,37 @@
 <div class="menu">
     <h1>Menu</h1>
 
+
+
+<div class="menu-item">
+    <h2>Dishes:</h2>
+    {{#each menuItems as |xValue xKey|}}
+   {{#each xValue.foodItems as |yValue yKey|}}
+        {{yValue}} 
+    {{/each}}
+    {{/each}}
+</div>
+ 
+
+ <div class="menu-item"> 
+     <h2>Vino:</h2>
 {{#each menuItems as |xValue xKey|}}
-
-    {{#each xValue.foodItems as |yValue yKey|}}
-        <p>{{yValue}}</p>
+ {{#each xValue.wineItems as |yValue yKey|}}
+       {{yValue}} 
     {{/each}}
-
-    <hr>
-
-    {{#each xValue.wineItems as |yValue yKey|}}
-        <p>{{yValue}}</p>
     {{/each}}
+ </div>
 
-    <hr>
 
-    {{#each xValue.dessertItems as |yValue yKey|}}
-        <p>{{yValue}}</p>
+<div class="menu-item">
+    <h2>Dessert:</h2>
+{{#each menuItems as |xValue xKey|}}
+{{#each xValue.dessertItems as |yValue yKey|}}
+       {{yValue}} 
     {{/each}}
+    {{/each}}
+</div>
 
-{{/each}}
 
 </div>
 </div>
