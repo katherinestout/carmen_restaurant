@@ -5,7 +5,7 @@ var d = new Date;
 var x = d.getDate();
 var y = d.getFullYear();
 var z = d.getMonth();
-var xyz = x + '/' + z;
+var xyz = z + '/' + x + '/' + y;
 
 
 
@@ -19,8 +19,8 @@ let reviewsSchema = new Schema({
         required: true
     },
     date: {
-        type: Number,
-        default: x
+        type: Object,
+        default: xyz
       }
 });
 
