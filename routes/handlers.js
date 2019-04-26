@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer =  require('nodemailer');
-const bodyParser = require('body-parser');
 
 
 const Review = require('../models/reviews');
@@ -80,7 +79,8 @@ router.get('/reviews', function(req, res){
 router.post('/reviews', function(req,res){
     let newReview = new Review({
         description: req.body.description,
-        name2: req.body.name2
+        name2: req.body.name2,
+        date: r
     });
     newReview.save().then(function(result){
         console.log(result);
@@ -107,16 +107,14 @@ router.post('/contact', (req, res) => {
 
     //nodemailer 
     nodemailer.createTestAccount((err, account) => {
-        const htmlEmail = `
-        <h3>Contact Details</h3>
+        const htmlEmail = 
+       `<h3>Contact Details</h3>
         <ul>
             <li>Name: ${req.body.name}</li>
             <li>Email: ${req.body.email}</li>
         </ul>
         <h3>Message</h3>
-        <p>${req.body.message}</p> 
-        
-        `
+        <p>${req.body.message}</p>`
 
         //mail options
 

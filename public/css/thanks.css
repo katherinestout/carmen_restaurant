@@ -21,19 +21,11 @@ h1{
 
     text-align: center;
 }
-.header-container{
-    margin: 10px;
-    padding-top: 60px;
- }
-
-
 
 .thanks {
     padding: 25em;
     background: #fff;
 }
-
-
 
 .wrapper {
     box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
