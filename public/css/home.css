@@ -12,7 +12,13 @@ body {
 .head-container{
   position: relative;
 text-align:center;
-color:white;
+color: white;
+
+}
+
+.overlay{
+  position: relative;
+opacity: .75;
 }
 
 .centered{
