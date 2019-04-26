@@ -5,7 +5,7 @@
 body {
     background: #FEF6EF;
     line-height: 1.6;
-    color: #485e74;
+    color: black;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -43,17 +43,38 @@ h1{
     background: white;
     text-align: center;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
+ 
+}
+.reviews-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+.customer-review-item{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 ul{
     list-style-type: none;
 }
 
+
+
 .review-form {
 
     background: #FEE2C2;
 }
 
+.top {
+    text-align: center;
+}
+
+.cr-title{
+    font-family: 'Dancing Script', cursive;
+}
 
 .review-form form{
     display: grid;

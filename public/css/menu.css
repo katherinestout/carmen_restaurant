@@ -5,7 +5,7 @@
 body {
     background: #FEF6EF;
     line-height: 1.6;
-    color: #485e74;
+    color: black;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -63,7 +63,7 @@ h1{
 }
 
 .menu-item{
-    border: #FEBD84 1px solid;
+    margin-bottom:5px;
     margin-top: 5px;
     padding: 5px;
 

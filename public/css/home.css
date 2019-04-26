@@ -5,8 +5,21 @@
 body {
     background: #FEF6EF;
     line-height: 1.6;
-    color: #485e74;
+    color: black;
     font-family: 'Dancing Script', cursive;
+}
+
+.head-container{
+  position: relative;
+text-align:center;
+color:white;
+}
+
+.centered{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .parallax {
@@ -14,7 +27,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 600px; 
+  min-height: 400px; 
   background-image: url(https://images.unsplash.com/photo-1517685645259-c6caddb7165d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)
 }
 

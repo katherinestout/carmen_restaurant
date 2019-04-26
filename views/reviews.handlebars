@@ -10,10 +10,12 @@
 
 <div class="review-page content">
        <div class="container">
-      <h2 class="brand">Reviews</h2>
+        <h2 class="brand">Reviews</h2>
       <div class="wrapper">
           
 <div class="review-form">
+
+  <div class="top"><h3>Leave us some feedback!</h3></div>
 
  <form action="/reviews" method ="post">
 
@@ -36,15 +38,26 @@
 
           
   <div class="customer-reviews">
-        
-   <ul>
+    <h2 class="cr-title">Customer Reviews</h2>
+  
+<div class="reviews-grid">
+
+<div></div>
+  <div>
+<ul>
             {{#reviews}}
-            <li>
-            {{description}} - {{name2}} | {{date}} 
+            <li class="customer-review-item">
+           <i class="fas fa-pizza-slice"></i>
+            {{description}} - {{name2}} 
+            <p>{{date}}</p>
                
             </li>
             {{/reviews}}
     </ul>
+  </div>
+
+  <div></div>
+   </div>
 
       </div>
 
