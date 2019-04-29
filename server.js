@@ -27,6 +27,7 @@ const hbs = exphbs.create({
 
 //access to public folder
 app.use(express.static('public'));
+app.use(express.static('img'));
 
 //access to views folder
 app.set('views', path.join(__dirname, 'views'));

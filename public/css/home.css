@@ -12,13 +12,12 @@ body {
 .head-container{
   position: relative;
 text-align:center;
-color: white;
 
 }
 
 .overlay{
   position: relative;
-opacity: .75;
+opacity: .75%;
 }
 
 .centered{
@@ -26,16 +25,11 @@ opacity: .75;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: black;
+  background: #FEF6EF;
+  padding: 20px;
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 400px; 
-  background-image: url(https://images.unsplash.com/photo-1517685645259-c6caddb7165d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)
-}
 
 .home-page{
     max-width: 1170px;
@@ -77,7 +71,7 @@ padding-top: 20px;
 }
 
 h1{
-    padding-top: 60px;
+   
     text-align: center;
 }
 
@@ -164,6 +158,9 @@ h1{
       text-align: left;
       padding: 10px;
     }
+    .centered{
+      padding: 1px;
+    }
   }
 
 
@@ -176,6 +173,13 @@ h1{
   .home-wrapper-2{
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .text-1{
+    padding-right: 0px;
+
+  }
+  .text-2{
+      padding-left: 0px;
   }
 }
 
