@@ -15,10 +15,6 @@ text-align:center;
 
 }
 
-.overlay{
-  position: relative;
-opacity: .75%;
-}
 
 .centered{
   position: absolute;
@@ -27,7 +23,14 @@ opacity: .75%;
   transform: translate(-50%, -50%);
   color: black;
   background: #FEF6EF;
-  padding: 20px;
+  padding: 0px;
+
+}
+
+.backgr{
+  color: #FEF6EF;
+  opacity: .55;
+
 }
 
 
@@ -159,9 +162,23 @@ h1{
       padding: 10px;
     }
     .centered{
-      padding: 1px;
+      padding: 0px;
     }
   }
+
+
+  @media screen and (min-width: 700px){
+    .centered{
+      padding: 40px;
+    }
+  }
+
+  @media screen and (min-width: 900px){
+    .centered{
+      padding: 60px;
+    }
+  }
+
 
 
 

@@ -9,6 +9,30 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 
+.head-container{
+    position: relative;
+  text-align:center;
+  
+  }
+
+.centered{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background: #FEF6EF;
+    padding: 0px;
+  
+  }
+  
+  .backgr{
+    color: #FEF6EF;
+    opacity: .55;
+  
+  }
+  
+
 .contact-page{
     max-width: 1170px;
     margin-left: auto;
@@ -83,7 +107,7 @@ body {
     text-align: center;
 }
 h1{
-    padding-top: 60px;
+
     text-align: center;
 }
 
@@ -168,7 +192,23 @@ h1{
       text-align: left;
       padding: 10px;
     }
-  }
+    .centered{
+        padding: 0px;
+      }
+    }
+  
+  
+@media screen and (min-width: 700px){
+      .centered{
+        padding: 40px;
+      }
+    }
+  
+@media screen and (min-width: 900px){
+      .centered{
+        padding: 60px;
+      }
+    }
 
   /*Footer*/
 
