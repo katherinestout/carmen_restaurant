@@ -23,6 +23,7 @@ body {
     color: black;
     background: #FEF6EF;
     padding: 0px;
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
   
   }
   
@@ -196,7 +197,7 @@ h1{
         padding: 0px;
       }
     }
-    
+
     @media screen and (min-width: 650px){
       .centered{
         padding: 30px;
