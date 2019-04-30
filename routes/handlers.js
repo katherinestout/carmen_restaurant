@@ -80,7 +80,7 @@ router.post('/reviews', function(req,res){
     let newReview = new Review({
         description: req.body.description,
         name2: req.body.name2,
-        date: r
+        date: req.body.date
     });
     newReview.save().then(function(result){
         console.log(result);

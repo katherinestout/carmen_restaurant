@@ -5,7 +5,9 @@ var d = new Date;
 var x = d.getDate();
 var y = d.getFullYear();
 var z = d.getMonth();
-var xyz = z + '/' + x + '/' + y;
+var a = z + 1;
+
+var xyz = a + '/' + x + '/' + y;
 
 
 
