@@ -144,6 +144,12 @@ h1{
         padding: 0px;
       }
     }
+    
+    @media screen and (min-width: 650px){
+      .centered{
+        padding: 30px;
+      }
+    }
   
   
     @media screen and (min-width: 700px){

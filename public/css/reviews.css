@@ -216,6 +216,12 @@ h1{
           grid-template-columns: 1fr;
       }
       }
+@media screen and (min-width: 650px){
+        .centered{
+          padding: 30px;
+        }
+      }
+    
   
 @media screen and (min-width: 700px){
       .centered{

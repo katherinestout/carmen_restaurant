@@ -9,26 +9,26 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 .head-container{
-    position: relative;
-  text-align:center;
-  
-  }
+  position: relative;
+text-align:center;
+
+}
 .centered{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    background: #FEF6EF;
-    padding: 0px;
-  
-  }
-  
-  .backgr{
-    color: #FEF6EF;
-    opacity: .55;
-  
-  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background: #FEF6EF;
+  padding: 0px;
+
+}
+
+.backgr{
+  color: #FEF6EF;
+  opacity: .55;
+
+}
   
 
 .thanks-page{
@@ -36,7 +36,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
-    margin-bottom: 10%;
+    margin-bottom: 40%;
     text-align: center;
 }
 h1{
@@ -56,14 +56,6 @@ h1{
 .wrapper > *{
     padding: 1em;
 }
-
-
-.header-container{
-    margin: 10px;
-    padding-top: 60px;
- }
-
-
 
  /*for sticky nav*/
 .content {
@@ -130,6 +122,12 @@ h1{
     }
     .centered{
         padding: 0px;
+      }
+    }
+  
+@media screen and (min-width: 650px){
+      .centered{
+        padding: 30px;
       }
     }
   
